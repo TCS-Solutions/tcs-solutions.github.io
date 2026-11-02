@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TCS Solutions</title>
+    <link rel="icon" href="favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      :root {
+        --bs-font-sans-serif: "Inter", sans-serif;
+        --bs-body-font-family: "Inter", sans-serif;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        color: #111;
+      }
+
+      .contact-btn {
+        background-color: #111c4e;
+        border-color: #111c4e;
+        color: #fff;
+      }
+
+      .contact-btn:hover,
+      .contact-btn:focus {
+        background-color: #0b143d;
+        border-color: #0b143d;
+        color: #fff;
+      }
+
+      .logo-radius {
+        border-radius: 12px;
+        overflow: hidden;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      section[id] {
+        scroll-margin-top: 1rem;
+      }
+    </style>
+  </head>
+  <body class="bg-white">
+    <div class="container">
+      <header class="sticky-top bg-white border-bottom py-3">
+        <div class="d-flex align-items-center justify-content-between">
+          <a href="#home" class="d-inline-block" aria-label="TCS Solutions home">
+            <img src="assets/tcs-solutions-logo.png" alt="TCS Solutions" width="64" height="64">
+          </a>
+          <div class="d-flex align-items-center gap-2 gap-md-3">
+            <nav class="d-flex align-items-center gap-2 gap-md-3" aria-label="Main menu">
+              <a href="#home" class="text-dark text-decoration-none small">Home</a>
+              <a href="#services" class="text-dark text-decoration-none small">Services</a>
+              <a href="#about" class="text-dark text-decoration-none small">About</a>
+              <a href="#testimonials" class="text-dark text-decoration-none small">Testimonials</a>
+            </nav>
+            <a href="mailto:info@tcssolutions.co.uk" class="btn btn-sm contact-btn">Contact</a>
+          </div>
+        </div>
+      </header>
+
+      <main>
+      <section id="home" class="py-5">
+        <div class="row align-items-center gx-4 gy-4">
+          <div class="col-5">
+            <h1 class="display-5 lh-sm mb-2">What do we<br>do</h1>
+            <p class="fs-5 mb-3">How can we help you</p>
+            <a href="mailto:info@tcssolutions.co.uk" class="btn btn-sm contact-btn">Contact</a>
+          </div>
+          <div class="col-7">
+            <div class="ratio ratio-4x3 bg-light border logo-radius">
+              <img src="assets/our-tide-pier.png" alt="Pier over the sea" class="w-100 h-100 object-fit-cover">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="pb-5">
+        <h2 class="text-center fs-4 fw-normal mb-4">Services we provide</h2>
+        <div class="row g-4">
+          <div class="col-12 col-sm-6 col-md-4">
+            <div class="card h-100 border logo-radius">
+              <div class="ratio ratio-1x1 overflow-hidden">
+                <img src="assets/our-tide-pier.png" alt="Product one" class="card-img-top w-100 h-100 object-fit-cover">
+              </div>
+              <div class="card-body">
+                <h3 class="card-title fs-5">Product title</h3>
+                <p class="card-text small mb-0">Short product description.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4">
+            <div class="card h-100 border logo-radius">
+              <div class="ratio ratio-1x1 overflow-hidden">
+                <img src="assets/our-tide-pier.png" alt="Product two" class="card-img-top w-100 h-100 object-fit-cover">
+              </div>
+              <div class="card-body">
+                <h3 class="card-title fs-5">Product title</h3>
+                <p class="card-text small mb-0">Short product description.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4">
+            <div class="card h-100 border logo-radius">
+              <div class="ratio ratio-1x1 overflow-hidden">
+                <img src="assets/our-tide-pier.png" alt="Product three" class="card-img-top w-100 h-100 object-fit-cover">
+              </div>
+              <div class="card-body">
+                <h3 class="card-title fs-5">Product title</h3>
+                <p class="card-text small mb-0">Short product description.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="py-5">
+        <div class="row align-items-center gx-4 gy-4">
+          <div class="col-6">
+            <div class="logo-radius">
+              <img src="assets/banner.jpg" alt="TCS Solutions location" class="img-fluid w-100">
+            </div>
+          </div>
+          <div class="col-6">
+            <h2 class="display-5 lh-sm mb-2">Who are we</h2>
+            <p class="fs-5 mb-3">Why we are great</p>
+            <a href="mailto:info@tcssolutions.co.uk" class="btn btn-sm contact-btn">Contact</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="testimonials" class="py-5 text-center">
+        <p class="fs-5 mb-4">What our clients say</p>
+        <div class="row g-4 text-start">
+          <div class="col-12 col-md-4">
+            <div class="card h-100 border logo-radius">
+              <div class="card-body">
+                <img src="assets/tcs-solutions-logo.png" alt="Client logo" width="48" height="48" class="mb-3 logo-radius">
+                <p class="card-text">Client testimonial text.</p>
+                <p class="small mb-0 fw-semibold">Author name</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="card h-100 border logo-radius">
+              <div class="card-body">
+                <img src="assets/tcs-solutions-logo.png" alt="Client logo" width="48" height="48" class="mb-3 logo-radius">
+                <p class="card-text">Client testimonial text.</p>
+                <p class="small mb-0 fw-semibold">Author name</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="card h-100 border logo-radius">
+              <div class="card-body">
+                <img src="assets/tcs-solutions-logo.png" alt="Client logo" width="48" height="48" class="mb-3 logo-radius">
+                <p class="card-text">Client testimonial text.</p>
+                <p class="small mb-0 fw-semibold">Author name</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="py-5">
+        <div class="row gx-4 gy-4 align-items-center">
+          <div class="col-5">
+            <h2 class="display-5 mb-4">Call to Action</h2>
+            <p class="mb-3">Add a short call-to-action message here. Let customers know how we can help and encourage them to get in touch.</p>
+            <a href="mailto:info@tcssolutions.co.uk" class="btn btn-sm contact-btn">Contact</a>
+          </div>
+          <div class="col-7">
+            <div class="ratio ratio-16x9 bg-light border logo-radius">
+              <img src="assets/contact-image.jpg" alt="Contact TCS Solutions" class="w-100 h-100 object-fit-cover">
+            </div>
+          </div>
+        </div>
+      </section>
+      </main>
+
+      <footer id="footer" class="pt-4 pb-3 border-top">
+        <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
+          <a href="#home" class="d-inline-block" aria-label="TCS Solutions home">
+            <img src="assets/tcs-solutions-logo.png" alt="TCS Solutions" width="64" height="64">
+          </a>
+          <nav class="d-flex flex-wrap gap-3 small" aria-label="Footer menu">
+            <a href="#home" class="text-dark text-decoration-none">Home</a>
+            <a href="#services" class="text-dark text-decoration-none">Services</a>
+            <a href="#about" class="text-dark text-decoration-none">About</a>
+            <a href="#testimonials" class="text-dark text-decoration-none">Testimonials</a>
+            <a href="mailto:info@tcssolutions.co.uk" class="text-dark text-decoration-none">Contact</a>
+          </nav>
+        </div>
+        <div class="d-flex justify-content-between small text-secondary mt-4">
+          <span>&copy; <span id="copyright-year"></span> TCS Solutions</span>
+          <span>Updated <time id="last-updated"></time></span>
+        </div>
+      </footer>
+    </div>
+    <script>
+      document.getElementById("copyright-year").textContent = new Date().getFullYear();
+
+      const updatedDate = new Date(document.lastModified);
+      document.getElementById("last-updated").dateTime = updatedDate.toISOString().slice(0, 10);
+      document.getElementById("last-updated").textContent = updatedDate.toLocaleDateString("en-GB", {
+        day: "numeric",
+        month: "long",
+        year: "numeric"
+      });
+    </script>
+  </body>
+</html>
