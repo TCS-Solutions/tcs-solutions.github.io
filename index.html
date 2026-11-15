@@ -14,34 +14,24 @@
     <style>
       :root {
         --bs-font-sans-serif: "Inter", sans-serif;
-        --bs-body-font-family: "Inter", sans-serif;
-      }
-
-      body {
-        font-family: "Inter", sans-serif;
-        color: #111;
+        --bs-body-color: #111;
+        --bs-border-radius-lg: 0.75rem;
       }
 
       .contact-btn {
-        background-color: #111c4e;
-        border-color: #111c4e;
-        color: #fff;
+        --bs-btn-color: #fff;
+        --bs-btn-bg: #111c4e;
+        --bs-btn-border-color: #111c4e;
+        --bs-btn-hover-color: #fff;
+        --bs-btn-hover-bg: #0b143d;
+        --bs-btn-hover-border-color: #0b143d;
+        --bs-btn-active-color: #fff;
+        --bs-btn-active-bg: #0b143d;
+        --bs-btn-active-border-color: #0b143d;
       }
 
-      .contact-btn:hover,
-      .contact-btn:focus {
-        background-color: #0b143d;
-        border-color: #0b143d;
-        color: #fff;
-      }
-
-      .logo-radius {
-        border-radius: 12px;
-        overflow: hidden;
-      }
-
-      html {
-        scroll-behavior: smooth;
+      .service-image {
+        --bs-aspect-ratio: 50%;
       }
 
       section[id] {
@@ -51,212 +41,162 @@
   </head>
   <body class="bg-white">
     <div class="container">
-      <header class="sticky-top bg-white border-bottom py-3">
-        <div class="d-flex align-items-center justify-content-between">
-          <a href="#home" class="d-inline-block" aria-label="TCS Solutions home">
-            <img src="assets/tcs-solutions-logo.png" alt="TCS Solutions" width="64" height="64">
-          </a>
-          <div class="d-flex align-items-center gap-2 gap-md-3">
-            <nav class="d-flex align-items-center gap-2 gap-md-3" aria-label="Main menu">
-              <a href="#home" class="text-dark text-decoration-none small">Home</a>
-              <a href="#services" class="text-dark text-decoration-none small">Services</a>
-              <a href="#about" class="text-dark text-decoration-none small">About</a>
-              <a href="#testimonials" class="text-dark text-decoration-none small">Testimonials</a>
-            </nav>
-            <a href="mailto:info@tcssolutions.co.uk" class="btn btn-sm contact-btn">Contact</a>
-          </div>
+      <header class="sticky-top bg-white border-bottom py-3 d-flex align-items-center justify-content-between">
+        <a href="#home" aria-label="TCS Solutions home">
+          <img src="assets/tcs-solutions-logo.png" alt="TCS Solutions" width="64" height="64">
+        </a>
+        <div class="d-flex align-items-center gap-2 gap-md-3">
+          <nav class="d-flex align-items-center gap-2 gap-md-3" aria-label="Main menu">
+            <a href="#home" class="text-dark text-decoration-none small">Home</a>
+            <a href="#services" class="text-dark text-decoration-none small">Services</a>
+            <a href="#about" class="text-dark text-decoration-none small">About</a>
+          </nav>
+          <a href="mailto:info@tcssolutions.co.uk" class="btn btn-sm contact-btn">Contact</a>
         </div>
       </header>
 
-      <main>
-      <section id="home" class="py-5">
-        <div class="row align-items-center gx-4 gy-4">
-          <div class="col-5">
-            <h1 class="display-5 lh-sm mb-2">Bespoke Software Solutions.<br>Built Around Your Business</h1>
-            <p class="fs-5 mb-3">From custom applications to seamless integrations and automation, our engineers help business work smarter. Giving you more time to focus on what matters most. </p>
-            <a href="mailto:info@tcssolutions.co.uk" class="btn btn-sm contact-btn">Contact</a>
-          </div>
-          <div class="col-7">
-            <div class="ratio ratio-4x3 bg-light border logo-radius">
-              <img src="assets/Business.png" alt="Large buildings" class="w-100 h-100 object-fit-cover">
+      <main class="d-flex flex-column gap-5 py-5">
+        <section id="home">
+          <div class="row align-items-center g-4">
+            <div class="col-5">
+              <h2>Software Solutions</h2>
+              <h1 class="display-5 mb-2">Built For Your Business</h1>
+              <p class="fs-5">Custom applications, seamless integration and process automation, we help business work smarter.</p>
+              <a href="#services" class="btn btn-sm contact-btn">Learn More</a>
+            </div>
+            <div class="col-7">
+              <div class="ratio ratio-4x3 bg-light border rounded-3 overflow-hidden">
+                <img src="assets/Business.png" alt="Large buildings" class="object-fit-cover">
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section id="services" class="pb-5">
-        <h2 class="text-center fs-4 fw-normal mb-4">Our Services</h2>
-        <div class="row g-4">
-          <div class="col-12 col-sm-6 col-md-4">
-            <div class="card h-100 border logo-radius">
-              <div class="ratio ratio-1x1 overflow-hidden">
-                <img src="assets/Computer.jpg" alt="Product one" class="card-img-top w-100 h-100 object-fit-cover">
+        <section id="services">
+          <h4 class="text-center mb-4">How We Help Your Business Work Smarter</h4>
+          <div class="row g-4">
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="card h-100 rounded-3 overflow-hidden">
+                <div class="ratio service-image">
+                  <img src="assets/Computer.jpg" alt="Product one" class="object-fit-cover">
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title fs-5">Application Development</h3>
+                  <p class="card-text small">Internal applications built around your business.<br>Automating workflows & processes, own your data.</p>
+                </div>
               </div>
-              <div class="card-body">
-                <h3 class="card-title fs-5">Custom Application Development</h3>
-                <p class="card-text small mb-0">Build web, mobile and internal applications built around you and your business. Automate workflows, streamline processes, and keep the data internal. </p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="card h-100 rounded-3 overflow-hidden">
+                <div class="ratio service-image">
+                  <img src="assets/Consolidate.jpg" alt="Product one" class="object-fit-cover">
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title fs-5">Software Modernisation</h3>
+                  <p class="card-text small">Reduce tech debt through replatforming, rearchitecturing and phased deprication.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="card h-100 rounded-3 overflow-hidden">
+                <div class="ratio service-image">
+                  <img src="assets/Miscalleneous.jpg" alt="Product two" class="object-fit-cover">
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title fs-5">Platform Consolidation</h3>
+                  <p class="card-text small">Move away from multiple subscriptions and fragmented workflows with an in-house software solution.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="card h-100 rounded-3 overflow-hidden">
+                <div class="ratio service-image">
+                  <img src="assets/Dashboard.jpg" alt="Product one" class="object-fit-cover">
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title fs-5">IoT & Connected Solutions</h3>
+                  <p class="card-text small">Connect your fleet, hardware and field operations with a custom IoT solution.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="card h-100 rounded-3 overflow-hidden">
+                <div class="ratio service-image">
+                  <img src="assets/Design.jpg" alt="Product three" class="object-fit-cover">
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title fs-5">Design & 3D Modelling</h3>
+                  <p class="card-text small">From web design to print posters and 3D assets, we create graphics that benefit you.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="card h-100 rounded-3 overflow-hidden">
+                <div class="ratio service-image">
+                  <img src="assets/Support.jpg" alt="Product one" class="object-fit-cover">
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title fs-5">Maintenance & Support</h3>
+                  <p class="card-text small">Not looking for anything new?<br> We offer extended project support and maintenance services.</p>
+                </div>
               </div>
             </div>
           </div>
-          <div class="col-12 col-sm-6 col-md-4">
-            <div class="card h-100 border logo-radius">
-              <div class="ratio ratio-1x1 overflow-hidden">
-                <img src="assets/Consolidate.jpg" alt="Product one" class="card-img-top w-100 h-100 object-fit-cover">
-              </div>
-              <div class="card-body">
-                <h3 class="card-title fs-5">Software Modernisation</h3>
-                <p class="card-text small mb-0">Modernise legacy applications through replatforming, rearchitecturing and phased replacement. Bringing your business to the forefront of development. </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-sm-6 col-md-4">
-            <div class="card h-100 border logo-radius">
-              <div class="ratio ratio-1x1 overflow-hidden">
-                <img src="assets/Miscalleneous.jpg" alt="Product two" class="card-img-top w-100 h-100 object-fit-cover">
-              </div>
-              <div class="card-body">
-                <h3 class="card-title fs-5">Platform Consolidation</h3>
-                <p class="card-text small mb-0">Move away from multiple subscriptions and fragmented workflows with a custom-built solution designed around your business.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-sm-6 col-md-4">
-            <div class="card h-100 border logo-radius">
-              <div class="ratio ratio-1x1 overflow-hidden">
-                <img src="assets/Design.jpg" alt="Product three" class="card-img-top w-100 h-100 object-fit-cover">
-              </div>
-              <div class="card-body">
-                <h3 class="card-title fs-5">Graphic Design</h3>
-                <p class="card-text small mb-0">Beyond the software, we can help you create a visual identity that reflects your business and resonates with your audience.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-sm-6 col-md-4">
-            <div class="card h-100 border logo-radius">
-              <div class="ratio ratio-1x1 overflow-hidden">
-                <img src="assets/Dashboard.jpg" alt="Product one" class="card-img-top w-100 h-100 object-fit-cover">
-              </div>
-              <div class="card-body">
-                <h3 class="card-title fs-5">IoT & Connected Solutions</h3>
-                <p class="card-text small mb-0">Connect your fleet, hardware, and field operations into one central dashboard with custom-built IoT software. </p>
-              </div>
-            </div>
-          </div> 
-          <div class="col-12 col-sm-6 col-md-4">
-            <div class="card h-100 border logo-radius">
-              <div class="ratio ratio-1x1 overflow-hidden">
-                <img src="assets/support.jpg" alt="Product one" class="card-img-top w-100 h-100 object-fit-cover">
-              </div>
-              <div class="card-body">
-                <h3 class="card-title fs-5">Maintenance & Support</h3>
-                <p class="card-text small mb-0">Not looking for anything new? We also offer extended project support and maintenance services. </p>
-              </div>
-            </div>
-          </div>
-        </div> 
-      </section>
+        </section>
 
-      <section id="about" class="py-5">
-        <div class="row align-items-center gx-4 gy-4">
-          <div class="col-12">
-            <div class="logo-radius">
-              <img src="assets/banner.jpg" alt="TCS Solutions location" class="img-fluid w-100">
+        <section id="about">
+          <div class="row align-items-center g-4">
+            <div class="col-6">
+              <img src="assets/banner.jpg" alt="TCS Solutions location" class="img-fluid w-100 rounded-3">
+            </div>
+            <div class="col-6">
+              <h4>Built locally. Trusted by industry.</h4>
+              <p>
+                We are a team of software developers passionate about solving complex business problems with simple, effective technology.
+                Since 2024, we have developed relationships with clients who continue to rely on us to improve and support their systems.
+              </p>
+              <p>
+                Our approach combines the energy of a new generation with the reliability of proven delivery.
+                We don't believe in one-size-fits-all software. Every solution we build is bespoke, designed around your processes.
+                Rooted in our local community and driven by the latest technology.
+              </p>
             </div>
           </div>
-          <div class="col-6">
-            <h2 class="display-5 lh-sm mb-2">About Us</h2>
-            <h3>Built locally. Trusted by industry.</h3>
-            <p class="fs-5 mb-3"> We're a team of software engineers passionate about solving complex business problems with simple, effective technology. Over the last two years, we've developed long-term relationships with clients who continue to rely on us to improve, expand and support their systems.
+        </section>
 
-Our approach combines the energy and innovation of a new generation with the reliability of proven delivery. We don't believe in one-size-fits-all software. Every solution we build is bespoke, designed around your processes, your people and your goals.
-
-Rooted in our local community and driven by the latest technology, we're helping businesses work smarter today while preparing them for tomorrow. </p>
-            <a href="mailto:info@tcssolutions.co.uk" class="btn btn-sm contact-btn">Contact</a>
-          </div>
-        </div>
-      </section>
-
-      <!-- <section id="testimonials" class="py-5 text-center">
-        <p class="fs-5 mb-4">What our clients say</p>
-        <div class="row g-4 text-start">
-          <div class="col-12 col-md-4">
-            <div class="card h-100 border logo-radius">
-              <div class="card-body">
-                <img src="assets/tcs-solutions-logo.png" alt="Client logo" width="48" height="48" class="mb-3 logo-radius">
-                <p class="card-text">Incredibly effective at delivering solutions that meet our unique needs.</p>
-                <p class="small mb-0 fw-semibold">Dantek</p>
+        <section id="contact">
+          <div class="row align-items-center">
+            <div class="col-5">
+              <h2 class="display-5 mb-4">Get In Touch</h2>
+              <p>Ready to get started or wanting to hear more? Don't hesitate to reach out and our friendly team will be in touch shortly!</p>
+              <a href="mailto:info@tcssolutions.co.uk" class="btn btn-sm contact-btn">Contact</a>
+            </div>
+            <div class="col-7">
+              <div class="ratio ratio-16x9 bg-light border rounded-3 overflow-hidden">
+                <img src="assets/contact-image.jpg" alt="Contact TCS Solutions" class="object-fit-cover">
               </div>
             </div>
           </div>
-          <div class="col-12 col-md-4">
-            <div class="card h-100 border logo-radius">
-              <div class="card-body">
-                <img src="assets/tcs-solutions-logo.png" alt="Client logo" width="48" height="48" class="mb-3 logo-radius">
-                <p class="card-text">Professionally produced app, delivered on time and within budget, gaining over 300 additonal sign ups!</p>
-                <p class="small mb-0 fw-semibold">UoBJJ</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-4">
-            <div class="card h-100 border logo-radius">
-              <div class="card-body">
-                <img src="assets/tcs-solutions-logo.png" alt="Client logo" width="48" height="48" class="mb-3 logo-radius">
-                <p class="card-text">Very personal and professional approach. Top work!.</p>
-                <p class="small mb-0 fw-semibold">John Doe -->
-
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="py-5">
-        <div class="row gx-4 gy-4 align-items-center">
-          <div class="col-5">
-            <h2 class="display-5 mb-4">Get In Touch</h2>
-            <p class="mb-3">Ready to get started or wanting to hear more? Don't hesitate to reach out and our friendly team will be in touch shortly! </p>
-            <a href="mailto:info@tcssolutions.co.uk" class="btn btn-sm contact-btn">Contact</a>
-          </div>
-          <div class="col-7">
-            <div class="ratio ratio-16x9 bg-light border logo-radius">
-              <img src="assets/contact-image.jpg" alt="Contact TCS Solutions" class="w-100 h-100 object-fit-cover">
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
       </main>
 
-      <footer id="footer" class="pt-4 pb-3 border-top">
+      <footer class="pt-4 pb-3 border-top">
         <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
-          <a href="#home" class="d-inline-block" aria-label="TCS Solutions home">
+          <a href="#home" aria-label="TCS Solutions home">
             <img src="assets/tcs-solutions-logo.png" alt="TCS Solutions" width="64" height="64">
           </a>
           <nav class="d-flex flex-wrap gap-3 small" aria-label="Footer menu">
             <a href="#home" class="text-dark text-decoration-none">Home</a>
             <a href="#services" class="text-dark text-decoration-none">Services</a>
             <a href="#about" class="text-dark text-decoration-none">About</a>
-            <a href="#testimonials" class="text-dark text-decoration-none">Testimonials</a>
             <a href="mailto:info@tcssolutions.co.uk" class="text-dark text-decoration-none">Contact</a>
           </nav>
         </div>
         <div class="d-flex justify-content-between small text-secondary mt-4">
-          <span>&copy; <span id="copyright-year"></span> TCS Solutions</span>
-          <span>Updated <time id="last-updated"></time></span>
+          <span>&copy; 2026 TCS Solutions</span>
+          <span>Updated November 2026</span>
         </div>
       </footer>
     </div>
-    <script>
-      document.getElementById("copyright-year").textContent = new Date().getFullYear();
-
-      const updatedDate = new Date(document.lastModified);
-      document.getElementById("last-updated").dateTime = updatedDate.toISOString().slice(0, 10);
-      document.getElementById("last-updated").textContent = updatedDate.toLocaleDateString("en-GB", {
-        day: "numeric",
-        month: "long",
-        year: "numeric"
-      });
-    </script>
   </body>
 </html>
